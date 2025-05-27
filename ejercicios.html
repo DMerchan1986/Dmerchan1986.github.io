@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ejercicios de Python</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Ejercicios para practicar Python</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="lecciones.html">Lecciones</a></li>
+        <li><a href="ejercicios.html" class="active">Ejercicios</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Ejercicio 1: Suma de dos números</h2>
+      <p>Escribe un programa que pida dos números y muestre su suma:</p>
+      <pre><code>num1 = int(input("Número 1: "))
+num2 = int(input("Número 2: "))
+print("Suma:", num1 + num2)</code></pre>
+    </section>
+
+    <section>
+      <h2>Ejercicio 2: Determinar si un número es par o impar</h2>
+      <pre><code>num = int(input("Número: "))
+if num % 2 == 0:
+    print("Es par")
+else:
+    print("Es impar")</code></pre>
+    </section>
+
+    <section>
+      <h2>Ejercicio 3: Factorial con función recursiva</h2>
+      <pre><code>def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+print(factorial(5))  # Salida: 120</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Aprende Python. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

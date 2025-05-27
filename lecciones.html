@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lecciones de Python</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Lecciones Básicas de Python</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="lecciones.html" class="active">Lecciones</a></li>
+        <li><a href="ejercicios.html">Ejercicios</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Lección 1: Variables y tipos de datos</h2>
+      <p>En Python, no necesitas declarar el tipo de variable. Aquí un ejemplo:</p>
+      <pre><code>x = 10
+nombre = "Ana"
+es_estudiante = True
+print(x, nombre, es_estudiante)</code></pre>
+      <p>Salida:</p>
+      <pre><code>10 Ana True</code></pre>
+    </section>
+
+    <section>
+      <h2>Lección 2: Condicionales</h2>
+      <p>La estructura condicional permite tomar decisiones:</p>
+      <pre><code>edad = 18
+if edad >= 18:
+    print("Eres mayor de edad")
+else:
+    print("Eres menor de edad")</code></pre>
+      <p>Salida:</p>
+      <pre><code>Eres mayor de edad</code></pre>
+    </section>
+
+    <section>
+      <h2>Lección 3: Bucles</h2>
+      <p>Python tiene bucles <code>for</code> y <code>while</code>:</p>
+      <pre><code># Bucle for
+for i in range(5):
+    print(i)
+
+# Bucle while
+contador = 0
+while contador < 5:
+    print(contador)
+    contador += 1</code></pre>
+    </section>
+
+    <section>
+      <h2>Lección 4: Funciones</h2>
+      <p>Las funciones son bloques de código reutilizables:</p>
+      <pre><code>def saludar(nombre):
+    print(f"Hola, {nombre}!")
+
+saludar("Carlos")</code></pre>
+      <p>Salida:</p>
+      <pre><code>Hola, Carlos!</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Aprende Python. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

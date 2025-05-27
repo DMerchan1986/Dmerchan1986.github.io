@@ -1,0 +1,214 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #fefefe;
+  color: #222;
+  line-height: 1.6;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  padding-bottom: 50px;
+}
+
+/* Modo oscuro */
+body.dark {
+  background: #121212;
+  color: #e0e0e0;
+}
+
+/* Encabezado */
+header {
+  background: #007acc;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #005f9e;
+}
+
+/* Botón menú responsive */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Main */
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+.card {
+  background: #e8f4fd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.15);
+}
+
+body.dark .card {
+  background: #1e2a38;
+  box-shadow: 0 2px 8px rgb(255 255 255 / 0.1);
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: #007acc;
+}
+
+h3 {
+  margin-bottom: 10px;
+  color: #005f9e;
+}
+
+pre {
+  background: #282c34;
+  color: #f8f8f2;
+  padding: 12px 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  position: relative;
+  font-size: 14px;
+}
+
+/* Botón copiar código */
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #007acc;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.copy-btn:hover {
+  background-color: #005f9e;
+}
+
+/* Botón modo oscuro */
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #007acc;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: background-color 0.3s ease;
+  z-index: 999;
+}
+
+.theme-toggle:hover {
+  background-color: #005f9e;
+}
+
+/* Botón volver arriba */
+.scroll-top {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: #1abc9c;
+  color: white;
+  border: none;
+  padding: 14px 16px;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 999;
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #007acc;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border-radius: 8px;
+    width: 150px;
+    padding: 10px 0;
+  }
+
+  nav ul.slide {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 8px 0;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
