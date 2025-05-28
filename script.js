@@ -1,49 +1,29 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Animación para imágenes (aparecen suavemente)
+  // Fade in para imágenes
   document.querySelectorAll("img").forEach(function(img) {
-    img.addEventListener("load", function() {
-      img.classList.add("loaded");
-    });
-    // Si ya está cargada (por caché), agrega la clase directamente
-    if (img.complete) {
-      img.classList.add("loaded");
-    }
+    function showImg() { img.classList.add("loaded"); }
+    img.addEventListener("load", showImg);
+    if (img.complete) showImg();
   });
 
-  // Animación para secciones con la clase 'fade-in' al hacer scroll
+  // Fade in para secciones y otros elementos
   function revealOnScroll() {
-    const fadeEls = document.querySelectorAll('.fade-in');
-    const windowHeight = window.innerHeight;
-    fadeEls.forEach(function(el) {
+    document.querySelectorAll('.fade-in').forEach(function(el) {
       const rect = el.getBoundingClientRect();
-      if (rect.top < windowHeight - 50) {
+      if(rect.top < window.innerHeight - 50) {
         el.classList.add('fade-in-visible');
       }
     });
   }
   window.addEventListener('scroll', revealOnScroll);
-  revealOnScroll(); // Ejecuta al cargar la página
+  revealOnScroll();
+
+  // Menú responsive
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navUl = document.querySelector('nav ul');
+  if(menuToggle && navUl) {
+    menuToggle.addEventListener('click', function() {
+      navUl.classList.toggle('slide');
+    });
+  }
 });
-
-// (Opcional) Botón de volver arriba si lo tienes en tu HTML
-const scrollTopBtn = document.querySelector('.scroll-top');
-if (scrollTopBtn) {
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 300) {
-      scrollTopBtn.classList.add('visible');
-    } else {
-      scrollTopBtn.classList.remove('visible');
-    }
-  });
-  scrollTopBtn.addEventListener('click', function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-}
-
-// (Opcional) Botón modo oscuro si lo tienes en tu HTML
-const themeToggle = document.querySelector('.theme-toggle');
-if (themeToggle) {
-  themeToggle.addEventListener('click', function() {
-    document.body.classList.toggle('dark');
-  });
-}
