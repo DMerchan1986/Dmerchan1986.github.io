@@ -1,5 +1,3 @@
-document.addEventListener("DOMContentLoaded",
-// Animación fade-in para imágenes y secciones
 document.addEventListener("DOMContentLoaded", function() {
   // Animación para imágenes (aparecen suavemente)
   document.querySelectorAll("img").forEach(function(img) {
