@@ -49,6 +49,7 @@ nav ul li a {
   border-radius: 6px;
   transition: background 0.3s, color 0.3s, transform 0.2s;
 }
+
 nav ul li a:hover,
 nav ul li a.active {
   background: #ffd43b;
@@ -188,6 +189,11 @@ pre {
 
 /* Responsive */
 @media (max-width: 768px) {
+  header {
+    position: relative;
+    z-index: 1010;
+  }
+
   nav ul {
     display: none;
     flex-direction: column;
@@ -198,6 +204,7 @@ pre {
     border-radius: 8px;
     width: 150px;
     padding: 10px 0;
+    z-index: 1000; /* Asegura que el menú está encima */
   }
 
   nav ul.slide {
@@ -211,8 +218,11 @@ pre {
 
   .menu-toggle {
     display: block;
+    position: relative;
+    z-index: 1020; /* Encima del menú */
   }
 }
+
 /* Animación de aparición para imágenes */
 img {
   opacity: 0;
