@@ -240,3 +240,20 @@ img.loaded {
   opacity: 1;
   transform: none;
 }
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@media (max-width: 768px) {
+  .header-menu {
+    flex-direction: row;
+    align-items: center;
+  }
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
