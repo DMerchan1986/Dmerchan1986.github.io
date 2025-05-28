@@ -47,12 +47,13 @@ nav ul li a {
   font-weight: 600;
   padding: 6px 12px;
   border-radius: 6px;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
 }
-
 nav ul li a:hover,
 nav ul li a.active {
-  background-color: #005f9e;
+  background: #ffd43b;
+  color: #222;
+  transform: scale(1.07);
 }
 
 /* Botón menú responsive */
@@ -211,4 +212,21 @@ pre {
   .menu-toggle {
     display: block;
   }
+}
+/* Animación de aparición para imágenes */
+img {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s, transform 0.7s;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 12px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 0.08);
+}
+
+img.loaded {
+  opacity: 1;
+  transform: none;
 }
